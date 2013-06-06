@@ -148,13 +148,13 @@ with your correct timezone information.
 
 ## Release Notes
 
-*** Version 1.3 ***
+#### Version 1.3
 
 - Source = migrated the source code of the original project hosted on my site into Github. 
 - Fixed = paths to my server have been changed to paths to Github now.
 - Removed = there was a Firefox plugin I created many years ago that ended up in the original commit. This has been removed.
 
-*** Version 1.2 ***
+#### Version 1.2
 
 - Fixed = iCal bug message saying "no data was added to iCal" thanks to Jon Milan.
 - Added = London timezone support thanks to Ryan Hunt.
@@ -164,7 +164,7 @@ with your correct timezone information.
 - Tests = Now confirmed to work on Leopard 10.5.1, 10.5.2, 10.5.3 and 10.5.4
 - Tests = Now confirmed to work on all Apple computers.
 
-*** Version 1.1 ***
+#### Version 1.1
 
 - First release with South African timezone support.
 
