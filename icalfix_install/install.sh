@@ -15,15 +15,15 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#	 Version: 1.1
-#	 Release Date: 28 March 2008
+#	 Version: 1.3
+#	 Version Release Date: 6 June 2013
 
 mkdir ~/Downloads/src
 cd ~/Downloads/src
-curl -O http://justinhartman.com/downloads/iCalFix-latest.tar.gz
+curl -O https://github.com/justinhartman/OSX-iCal-Fix/blob/master/iCalFix-latest.tar.gz
 tar -zxf iCalFix-latest.tar.gz
 mkdir /Applications/iCalFix
-mv iCalFix/* /Applications/iCalFix
+mv iCalFix /Applications/iCalFix
 chmod -R 0777 /Applications/iCalFix
 rm -R ~/Downloads/src
 echo "Installation complete. Don't forget to add a Mail Rule to Apple Mail"
