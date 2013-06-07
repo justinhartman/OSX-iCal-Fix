@@ -20,6 +20,8 @@
 
 echo "cd'ing into the git repo..."
 /usr/bin/cd /Users/justinhartman/Documents/Git/OSX-iCal-Fix
+echo "Copying the README file into the install folder..."
+/bin/cp README.md icalfix_install/
 echo "Removing all old archive files..."
 /bin/rm icalfix_install.zip
 echo "Zipping up the install folder..."

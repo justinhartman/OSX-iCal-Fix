@@ -45,7 +45,7 @@ as well as later versions 10.6, 10.7. It may/or may not work on previous version
 
 ## Installation
 
-1. Download the Install script to your computer by [clicking here](https://github.com/justinhartman/OSX-iCal-Fix/blob/master/icalfix_install.zip) and extract the contents from the ZIP file. The folder contains a readme file as well as a Shell script which sets everything up for you.
+1. Download the Install script to your computer by [clicking here](https://raw.github.com/justinhartman/OSX-iCal-Fix/master/icalfix_install.zip) and extract the contents from the ZIP file. The folder contains a readme file as well as a Shell script which sets everything up for you.
 
 2. Right-click on the "install.sh" file, select "Open With" and then click on "Other".
 
@@ -59,7 +59,7 @@ as well as later versions 10.6, 10.7. It may/or may not work on previous version
 
 1. Delete the folder "/Applications/iCalFix/" in Finder.
 
-2. Download the Install script to your computer by [clicking here](https://github.com/justinhartman/OSX-iCal-Fix/blob/master/icalfix_install.zip) and extract the contents from the ZIP file. The folder contains a readme file as well as a Shell script which sets everything up for you.
+2. Download the Install script to your computer by [clicking here](https://raw.github.com/justinhartman/OSX-iCal-Fix/master/icalfix_install.zip) and extract the contents from the ZIP file. The folder contains a readme file as well as a Shell script which sets everything up for you.
 
 3. Right-click on the "install.sh" file, select "Open With" and then click on "Other".
 
