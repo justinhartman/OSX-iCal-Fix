@@ -174,7 +174,7 @@ with your correct timezone information.
 
 ## Todo
 
-- As of version 1.3 this code has simply been migrated from my server to Github. The current structure doesn't work anymore for installation and I need to fix this so that people can just run this fix from a cloned version of the repository.
+- ~~As of version 1.3 this code has simply been migrated from my server to Github. The current structure doesn't work anymore for installation and I need to fix this so that people can just run this fix from a cloned version of the repository.~~
 
 ## License
 
