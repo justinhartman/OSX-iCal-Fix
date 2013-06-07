@@ -1,6 +1,6 @@
 #!/bin/sh
 #    Apple iCal / Microsoft Exchange server Timezone Fix
-#    Copyright (C) 2008 Justin Hartman <http://justinhartman.com/>
+#    Copyright (C) 2008 Justin Hartman <http://twitter.com/justinhartman>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -15,16 +15,14 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-#	 Version: 1.3
-#	 Version Release Date: 6 June 2013
+#	 Version: 1.4
+#	 Version Release Date: 7 June 2013
 
-mkdir ~/Downloads/src
-cd ~/Downloads/src
-curl -O https://github.com/justinhartman/OSX-iCal-Fix/blob/master/iCalFix-latest.tar.gz
-tar -zxf iCalFix-latest.tar.gz
+echo "Creating the iCalFix directory in Applications folder..."
 mkdir /Applications/iCalFix
-mv iCalFix /Applications/iCalFix
-chmod -R 0777 /Applications/iCalFix
-rm -R ~/Downloads/src
+echo "Copying the folder contents to the Applications folder..."
+cp -R iCalFix/* /Applications/iCalFix
+echo "Applying some permissions..."
+chmod -R 0755 /Applications/iCalFix
 echo "Installation complete. Don't forget to add a Mail Rule to Apple Mail"
-exit
+exit 0
