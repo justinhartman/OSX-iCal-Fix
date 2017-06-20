@@ -1,0 +1,976 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>README</title></head><body><article class="markdown-body"><p><a href="https://github.com/justinhartman/OSX-iCal-Fix/issues"><img src="https://camo.githubusercontent.com/62f31c117649cb491edd5aac76e3916a3873a475/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f6a757374696e686172746d616e2f4f53582d6943616c2d4669782e737667" alt="GitHub issues" data-canonical-src="https://img.shields.io/github/issues/justinhartman/OSX-iCal-Fix.svg" style="max-width:100%;"></a>
+<a href="https://github.com/justinhartman/OSX-iCal-Fix/network"><img src="https://camo.githubusercontent.com/1efca927ec56852a706065ee0641db8db9b6fb18/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f6a757374696e686172746d616e2f4f53582d6943616c2d4669782e737667" alt="GitHub forks" data-canonical-src="https://img.shields.io/github/forks/justinhartman/OSX-iCal-Fix.svg" style="max-width:100%;"></a>
+<a href="https://github.com/justinhartman/OSX-iCal-Fix/stargazers"><img src="https://camo.githubusercontent.com/38a5ce88c624e747a33268d98f6b0c9b053a6a43/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f6a757374696e686172746d616e2f4f53582d6943616c2d4669782e737667" alt="GitHub stars" data-canonical-src="https://img.shields.io/github/stars/justinhartman/OSX-iCal-Fix.svg" style="max-width:100%;"></a>
+<a href="https://github.com/justinhartman/OSX-iCal-Fix/"><img src="https://camo.githubusercontent.com/8bb55beba26814444373d4f06b078c6d638f804e/68747470733a2f2f696d672e736869656c64732e696f2f7472617669732f6a757374696e686172746d616e2f4f53582d6943616c2d4669782e737667" alt="Travis" data-canonical-src="https://img.shields.io/travis/justinhartman/OSX-iCal-Fix.svg" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix"><img src="https://camo.githubusercontent.com/6e489167d90298350e0816ff29efa84ba8682c30/68747470733a2f2f636f6465636c696d6174652e636f6d2f6769746875622f6a757374696e686172746d616e2f4f53582d6943616c2d4669782f6261646765732f6770612e737667" alt="Code Climate" data-canonical-src="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix/badges/gpa.svg" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix/coverage"><img src="https://camo.githubusercontent.com/078a8d594b383e5246085aac7bb17380417dbc32/68747470733a2f2f636f6465636c696d6174652e636f6d2f6769746875622f6a757374696e686172746d616e2f4f53582d6943616c2d4669782f6261646765732f636f7665726167652e737667" alt="Test Coverage" data-canonical-src="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix/badges/coverage.svg" style="max-width:100%;"></a>
+<a href="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix"><img src="https://camo.githubusercontent.com/8eb33dff488ce4faab85db7c60a31bda8f9e67b3/68747470733a2f2f636f6465636c696d6174652e636f6d2f6769746875622f6a757374696e686172746d616e2f4f53582d6943616c2d4669782f6261646765732f69737375655f636f756e742e737667" alt="Issue Count" data-canonical-src="https://codeclimate.com/github/justinhartman/OSX-iCal-Fix/badges/issue_count.svg" style="max-width:100%;"></a>
+<a href="http://www.gnu.org/licenses/gpl-3.0"><img src="https://camo.githubusercontent.com/bf135a9cea09d0ea4bba410582c0e70ec8222736/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d47504c25323076332d626c75652e737667" alt="License: GPL v3" data-canonical-src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" style="max-width:100%;"></a>
+<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://camo.githubusercontent.com/c3b9e68f54db5d8d79569ee9c9bab0ebd05d8572/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d434325323042592d2d4e432d2d5341253230342e302d6c69676874677265792e737667" alt="License: CC BY-NC-SA 4.0" data-canonical-src="https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg" style="max-width:100%;"></a></p>
+<h1>
+<a id="user-content-apple-ical--microsoft-exchange-server-timezone-fix" class="anchor" href="#apple-ical--microsoft-exchange-server-timezone-fix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Apple iCal / Microsoft Exchange server Timezone Fix</h1>
+<p>This is a fix I created about 3 years ago that fixes timezone issues between iCal events sent by Exchange Server to Apple iCal. There is a problem with certain versions of Exchange where it offsets the meeting time due to compatibility issues with timezone support. This fixes this issue.</p>
+<h2>
+<a id="user-content-contents" class="anchor" href="#contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contents</h2>
+
+<ul>
+<li><a href="#about-this-fix">About this fix</a></li>
+<li><a href="#minimum-requirements">Minimum Requirements</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#upgrading">Upgrading</a></li>
+<li><a href="#setting-up-the-mail-rule">Setting up the Mail Rule</a></li>
+<li>
+<a href="#customise-timezone-support-for-your-region">Customise timezone support for your region</a>
+<ul>
+<li><a href="#1-finding-the-incorrect-timezone-from-microsoft-exchange">1. Finding the incorrect timezone from Microsoft Exchange</a></li>
+<li><a href="#2-finding-the-the-correct-timezone-from-apple-ical">2. Finding the the correct timezone from Apple iCal</a></li>
+<li><a href="#3-open-up-the-script">3. Open up the script</a></li>
+<li>
+<a href="#4-editing-the-timezone-script">4. Editing the timezone script</a>
+<ul>
+<li><a href="#working-with-the-template-in-the-script">Working with the template in the script</a></li>
+<li><a href="#modifying-the-exchange-and-ical-data">Modifying the Exchange and iCal data</a></li>
+<li><a href="#adding-the-data-to-the-script">Adding the data to the script</a></li>
+<li><a href="#5-request-help-optional">5. Request help (optional)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#disclaimer">Disclaimer</a></li>
+<li><a href="#release-notes">Release Notes</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#credits">Credits</a></li>
+</ul>
+
+<h2>
+<a id="user-content-about-this-fix" class="anchor" href="#about-this-fix" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About this fix</h2>
+<p>The install script downloads all the necessary files from Github.com and installs both an AppleScript and Shell script to a folder called iCalFix in your Applications folder.</p>
+<p>The AppleScript is then assigned to a Mail Rule and runs whenever an iCal invitation is received. The AppleScript downloads the iCal file to a temporary location and the Shell script then runs on the temp file and replaces any incorrect timezone information.</p>
+<p>Once completed the new iCal event is then imported to iCal with all the new timezone data in place. The beauty of this fix is that you don't need to edit any of the package files for iCal and even your original iCal invitations are left untouched. This means that you can upgrade iCal at a later stage and you should be safe from any data corruption.</p>
+<h2>
+<a id="user-content-minimum-requirements" class="anchor" href="#minimum-requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Minimum Requirements</h2>
+<ul>
+<li>Mac OS X Leopard</li>
+<li>Apple iCal version 3.0.2 / 3.0.4</li>
+<li>Apple Mail version 3.2 / 3.4</li>
+</ul>
+<p>This fix has been tested on Mac OS X Leopard 10.5.1, 10.5.2, 10.5.3, 10.5.4 as well as later versions from 10.6 through to 10.7.5. It may, or may not, work on both previous and future versions of macOS.</p>
+<h2>
+<a id="user-content-installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+<ol>
+<li>
+<p><a href="https://github.com/justinhartman/OSX-iCal-Fix/raw/v1.5.0/icalfix_install.zip">Download the installer script</a> to your computer and extract the contents from the <code>icalfix_install.zip</code> file. The folder contains a version of this README file which is in HTML format as well as the shell script which sets everything up for you.</p>
+</li>
+<li>
+<p>Open up the <code>icalfix_install</code> folder and right-click on the <code>install.sh</code> file. Select <code>Open With</code> and then click on <code>Other</code>.</p>
+</li>
+<li>
+<p>Navigate to <code>Applications –&gt; Utilities –&gt; Terminal</code>. If you can't select Terminal from the Open dialog menu then select <code>All Applications</code> from the drop-down list.</p>
+</li>
+<li>
+<p>Terminal will open up and the install script will run. When you see the message <code>Installation Complete.</code> you can close Terminal.</p>
+</li>
+<li>
+<p>You can now check if the bug fix was installed correctly by navigating to <code>/Applications/iCalFix/</code> in Finder. If you see two files installed in that folder then installation was successful.</p>
+</li>
+</ol>
+<h2>
+<a id="user-content-upgrading" class="anchor" href="#upgrading" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Upgrading</h2>
+<ol>
+<li>
+<p>Delete the <code>/Applications/iCalFix/</code> folder in Finder. <strong>If you made changes to the <code>fix_timezone.sh</code> file when you originally installed the fix then please make a backup of this file. You will lose any changes you made when you delete this folder. If you're not sure, backup the folder anyway.</strong></p>
+</li>
+<li>
+<p><a href="https://github.com/justinhartman/OSX-iCal-Fix/raw/v1.5.0/icalfix_install.zip">Download the installer script</a> to your computer and extract the contents from the <code>icalfix_install.zip</code> file. The folder contains a version of this README file which is in HTML format as well as the shell script which sets everything up for you.</p>
+</li>
+<li>
+<p>Open up the <code>icalfix_install</code> folder and right-click on the <code>install.sh</code> file. Select <code>Open With</code> and then click on <code>Other</code>.</p>
+</li>
+<li>
+<p>Navigate to <code>Applications –&gt; Utilities –&gt; Terminal</code>. If you can't select Terminal from the Open dialog menu then select <code>All Applications</code> from the drop-down list.</p>
+</li>
+<li>
+<p>Terminal will open up and the install script will run. When you see the message <code>Installation Complete.</code> you can close Terminal.</p>
+</li>
+<li>
+<p>You can now check if the bug fix was installed correctly by navigating to <code>/Applications/iCalFix/</code> in Finder. If you see two files installed in that folder then installation was successful.</p>
+</li>
+<li>
+<p>There is no need to setup a new mail rule. You can keep your existing mail rule that you created in a previous version.</p>
+</li>
+<li>
+<p>If you made changes to the <code>fix_timezone.sh</code> file please follow the instructions for how to Customise timezone support for your region contained later in this document.</p>
+</li>
+</ol>
+<h2>
+<a id="user-content-setting-up-the-mail-rule" class="anchor" href="#setting-up-the-mail-rule" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up the Mail Rule</h2>
+<p>If you are upgrading from a previous version or have already set up the mail rule in Mail you can ignore the this step completely.</p>
+<p>For first time users this is the final step to complete before you can begin using this fix. The email rule is important as it calls the AppleScript file which is where all the magic happens.</p>
+<p>Click on <code>Mail –&gt; Preferences –&gt; Rules</code> and create a new rule that looks identical to the one below.</p>
+<ul>
+<li>
+<p>Beneath <code>If any of the following conditions are met:</code> select <code>Account</code> and then chose your email account to apply the rule to.</p>
+</li>
+<li>
+<p>Click the plus sign next to the Account rule to add another row.</p>
+</li>
+<li>
+<p>Select <code>Any Attachment Name</code> from the first drop down box and <code>Ends with</code> from the second drop down box. Finally, type in <code>.ics</code> in the text field box</p>
+</li>
+<li>
+<p>Beneath <code>Perform the following actions:</code> select <code>Run AppleScript</code> from the drop down menu.</p>
+</li>
+<li>
+<p>Add this to the text field box next to it: <code>/Applications/iCalFix/ical_fix.scpt</code></p>
+</li>
+<li>
+<p>Click <code>OK</code> and then <code>Don't Apply</code> when you close the Preferences pane.</p>
+</li>
+</ul>
+<h2>
+<a id="user-content-customise-timezone-support-for-your-region" class="anchor" href="#customise-timezone-support-for-your-region" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Customise timezone support for your region</h2>
+<p>The timezone fix will work without any customisation if your timezone falls in any of the following regions:</p>
+<ol>
+<li>South Africa</li>
+<li>London</li>
+<li>West Coast, USA</li>
+<li>Tallinn</li>
+<li>Asia/Muscat</li>
+</ol>
+<p>Any timezone outside of the five above means that you will have no choice but to do some manual editing to get this script working for your timezone. There are four steps to follow which I hope are well documented and easy enough for you to implement this yourself.</p>
+<h3>
+<a id="user-content-1-finding-the-incorrect-timezone-from-microsoft-exchange" class="anchor" href="#1-finding-the-incorrect-timezone-from-microsoft-exchange" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Finding the incorrect timezone from Microsoft Exchange</h3>
+<p>To find out what the incorrect timezone data is you need to open up a Microsoft Exchange <code>ics</code> file that was sent from your Exchange server with a text editor.</p>
+<p>In this file you will see a line that looks similar to this:</p>
+<pre><code>"DTSTART;TZID="(GMT+02.00) Harare/Pretoria":20080329T090000"
+</code></pre>
+<h3>
+<a id="user-content-2-finding-the-the-correct-timezone-from-apple-ical" class="anchor" href="#2-finding-the-the-correct-timezone-from-apple-ical" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Finding the the correct timezone from Apple iCal</h3>
+<p>Opem up Apple iCal, create a dummy calendar event and then send yourself an iCal invitation. Once you receive the iCal invite in Mail, open up the attached <code>ics</code> file with a text editor and you should see a line that looks similar to this:</p>
+<pre><code>"DTSTART;TZID=Africa/Johannesburg:20080329T113000"
+</code></pre>
+<p>From both of the steps above you can see that Exchange is using the
+<code>(GMT+02.00) Harare/Pretoria</code> timezone information while Apple iCal
+is using <code>Africa/Johannesburg</code>. With this data you have the two bits of required information to setup your own timezone in the script.</p>
+<h3>
+<a id="user-content-3-open-up-the-script" class="anchor" href="#3-open-up-the-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. Open up the script</h3>
+<p>Open up the <code>fix_timezone.sh</code> file located in the <code>/Applications/iCalFix/</code> folder with a text editor. This file contains various regular expressions that search for incorrect timezone data and replaces it with the correct data.</p>
+<p>You will need to use the two sets of data you've just gotten to create your own regular expression in step 4 below. However, before you do this it is important to understand how the expression works so that modifying your own makes sense to you as well as to avoid confusion or making errors when editing the file.</p>
+<p>An example of an expression, which you will find in the file, is shown below:</p>
+<div class="highlight highlight-source-perl"><pre>perl -pi <span class="pl-k">-e</span> <span class="pl-s"><span class="pl-pds">'</span>s/\(GMT\+02\.00\)\ Harare\/Pretoria/Africa\/Johannesburg/g<span class="pl-pds">'</span></span> <span class="pl-smi">$ICSFILE</span></pre></div>
+<p>The segment highlighted below (from the above expression) searches for the incorrect timezone information in an Exchange <code>ics</code> file:</p>
+<div class="highlight highlight-source-perl"><pre><span class="pl-s"><span class="pl-pds">'</span>s/\(GMT\+02\.00\)\ Harare\/Pretoria<span class="pl-pds">'</span></span></pre></div>
+<p>While the highlighted segment below will replace the above match, if found:</p>
+<div class="highlight highlight-source-perl"><pre><span class="pl-s"><span class="pl-pds">'</span>/Africa\/Johannesburg/g<span class="pl-pds">'</span></span></pre></div>
+<h3>
+<a id="user-content-4-editing-the-timezone-script" class="anchor" href="#4-editing-the-timezone-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Editing the timezone script</h3>
+<p>Right, now you are ready to move on and modify the script to work for your environment. Remember the two sets of data you found in steps 1 and 2 above? Good, you are going to need this now to finish things off.</p>
+<p>To refresh your memory, the incorrect Microsoft Exchange timezone was <code>(GMT+02.00) Harare/Pretoria</code> while the correct Apple iCal timezone was <code>Africa/Johannesburg</code>.</p>
+<h4>
+<a id="user-content-working-with-the-template-in-the-script" class="anchor" href="#working-with-the-template-in-the-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Working with the template in the script</h4>
+<p>Scroll to the bottom of the script where you see the following template that has been added to make the process easier for you:</p>
+<div class="highlight highlight-source-perl"><pre><span class="pl-c"><span class="pl-c">#</span> ADDING YOUR OWN REGULAR EXPRESSION</span>
+<span class="pl-c"><span class="pl-c">#</span> PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE </span>
+<span class="pl-c"><span class="pl-c">#</span> UNDER `Customise timezone support for your region`</span>
+<span class="pl-c"><span class="pl-c">#</span> DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.</span>
+<span class="pl-c"><span class="pl-c">#</span>INCORRECT='';</span>
+<span class="pl-c"><span class="pl-c">#</span>CORRECT='';</span>
+<span class="pl-c"><span class="pl-c">#</span>perl -pi -e 's/$INCORRECT/$CORRECT/g' $ICSFILE</span>
+<span class="pl-k">exit</span> 0</pre></div>
+<p>You need to uncomment the following lines by deleting the <code>#</code> in front of each line:</p>
+<div class="highlight highlight-source-perl"><pre><span class="pl-c"><span class="pl-c">#</span>INCORRECT='';</span>
+<span class="pl-c"><span class="pl-c">#</span>CORRECT='';</span>
+<span class="pl-c"><span class="pl-c">#</span>perl -pi -e 's/$INCORRECT/$CORRECT/g' $ICSFILE</span></pre></div>
+<p>If done correctly, you should now have the following:</p>
+<div class="highlight highlight-source-perl"><pre><span class="pl-c"><span class="pl-c">#</span> ADDING YOUR OWN REGULAR EXPRESSION</span>
+<span class="pl-c"><span class="pl-c">#</span> PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE </span>
+<span class="pl-c"><span class="pl-c">#</span> UNDER `Customise timezone support for your region`</span>
+<span class="pl-c"><span class="pl-c">#</span> DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.</span>
+INCORRECT=<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;
+CORRECT=<span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>;
+perl -pi <span class="pl-k">-e</span> <span class="pl-s"><span class="pl-pds">'</span>s/$INCORRECT/$CORRECT/g<span class="pl-pds">'</span></span> <span class="pl-smi">$ICSFILE</span>
+<span class="pl-k">exit</span> 0</pre></div>
+<p><code>INCORRECT</code> is a variable where you will set the incorrect timezone data from Microsoft Exchange while <code>CORRECT</code> is the correct timezone data from Apple iCal.</p>
+<h4>
+<a id="user-content-modifying-the-exchange-and-ical-data" class="anchor" href="#modifying-the-exchange-and-ical-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modifying the Exchange and iCal data</h4>
+<p>Now for the tricky bit. You cannot just copy and paste the timezone data because certain characters and spaces need to be escaped with backslashes. Depending on what data you have for your region this may be a simple or complex procedure.</p>
+<p>The good news is that for our example data you will be able to see how to work with both a simple and a complex one. Let's start with the difficult one.</p>
+<p>The unmodified Microsoft Exchange server example looks like this:<br>
+<code>(GMT+02.00) Harare/Pretoria</code></p>
+<p>The following characters all need a backslash before it:<br>
+<code>(</code><br>
+<code>+</code><br>
+<code>.</code><br>
+<code>)</code><br>
+<code>/</code><br>
+Once the backlashes have been added you will end up with this:<br>
+<code>\(GMT\+02\.00\) Harare\/Pretoria</code></p>
+<p><strong>NB:</strong> You also need to add a backslash to any spaces contained in the text. In the modified example above there is a space just after the <code>)</code> and before <code>Harare</code>. So this, <code>) Harare</code>, needs to become this <code>)\ Harare</code>. Notice that the backslash is in front of the space, this is very important and is probably the <em>gotcha</em> you will need to look out for.</p>
+<p>Now that there are backslashes in all the right places you will end up with this final string which is perfectly modified for the script:<br>
+<code>\(GMT\+02\.00\)\ Harare\/Pretoria</code></p>
+<p>Whew, that was hard going. That said, our unmodified iCal example is very simple to change as we have no odd characters nor any spaces to deal with.</p>
+<p>The unmodified example looks like this:<br>
+<code>Africa/Johannesburg</code></p>
+<p>All that is needed to get the right modified version is to add a backslash before the forward-slash as shown below:<br>
+<code>Africa\/Johannesburg</code></p>
+<h4>
+<a id="user-content-adding-the-data-to-the-script" class="anchor" href="#adding-the-data-to-the-script" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding the data to the script</h4>
+<div class="highlight highlight-source-perl"><pre><span class="pl-c"><span class="pl-c">#</span> ADDING YOUR OWN REGULAR EXPRESSION</span>
+<span class="pl-c"><span class="pl-c">#</span> PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE </span>
+<span class="pl-c"><span class="pl-c">#</span> UNDER `Customise timezone support for your region`</span>
+<span class="pl-c"><span class="pl-c">#</span> DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.</span>
+INCORRECT=<span class="pl-s"><span class="pl-pds">'</span>\(GMT\+02\.00\)\ Harare\/Pretoria<span class="pl-pds">'</span></span>;
+CORRECT=<span class="pl-s"><span class="pl-pds">'</span>Africa\/Johannesburg<span class="pl-pds">'</span></span>;
+perl -pi <span class="pl-k">-e</span> <span class="pl-s"><span class="pl-pds">'</span>s/$INCORRECT/$CORRECT/g<span class="pl-pds">'</span></span> <span class="pl-smi">$ICSFILE</span>
+<span class="pl-k">exit</span> 0</pre></div>
+<p>You can now save your file and you should be good to go.</p>
+<h4>
+<a id="user-content-5-request-help-optional" class="anchor" href="#5-request-help-optional" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Request help (optional)</h4>
+<p>I know that modifying the script may be daunting for some and even if it isn't there are times when you may run into issues or errors when making changes so the scripts.</p>
+<p>If you need any support or don't know how to make these changes please feel free to <a href="https://github.com/justinhartman/OSX-iCal-Fix/issues/new">open up an issue on Github</a> and I will do my best to help you.</p>
+<h2>
+<a id="user-content-disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Disclaimer</h2>
+<ul>
+<li>
+<p>Before installing or running this fix make sure you backup your iCal first. In iCal click "File –&gt; Back up iCal" and save a backed up version to your computer.</p>
+</li>
+<li>
+<p>Use this fix at your own risk. I can't take any responsibility for any data loss or corruption that may occur as a result of using this fix.</p>
+</li>
+<li>
+<p>This fix has <strong>not</strong> been tested by me on either Mac OS X 10.6, 10.7 or 10.8 so I have no idea if it works any more or not. It would be great if someone could let me know if it worked on one of these versions or not by sending me a mail to <a href="mailto:justin@hartman.me">justin@hartman.me</a></p>
+</li>
+</ul>
+<h2>
+<a id="user-content-release-notes" class="anchor" href="#release-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Release Notes</h2>
+<p>The release notes can be found in the <a href="CHANGELOG.html">CHANGELOG</a> file.</p>
+<h2>
+<a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+<p><a href="LICENSE.html">GNU GPLv3</a>.</p>
+<h2>
+<a id="user-content-credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Credits</h2>
+<p>See <a href="CREDITS.html">CREDITS</a></p>
+</article></body></html>
