@@ -27,7 +27,7 @@ This is a fix I created about 3 years ago that fixes timezone issues between iCa
         - [Working with the template in the script](#working-with-the-template-in-the-script)
         - [Modifying the Exchange and iCal data](#modifying-the-exchange-and-ical-data)
         - [Adding the data to the script](#adding-the-data-to-the-script)
-        - [5. Request help \(optional\)](#5-request-help-optional)
+    - [5. Request help \(optional\)](#5-request-help-optional)
 - [Disclaimer](#disclaimer)
 - [Release Notes](#release-notes)
 - [License](#license)
@@ -219,7 +219,7 @@ exit 0
 ```
 You can now save your file and you should be good to go.
 
-#### 5. Request help (optional)
+### 5. Request help (optional)
 I know that modifying the script may be daunting for some and even if it isn't there are times when you may run into issues or errors when making changes so the scripts.
 
 If you need any support or don't know how to make these changes please feel free to [open up an issue on Github][issue-reporting] and I will do my best to help you.
