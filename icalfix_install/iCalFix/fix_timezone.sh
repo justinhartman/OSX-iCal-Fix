@@ -37,7 +37,7 @@ perl -pi -e 's/Helsinki\,\ Kyiv\,\ Riga\,\ Sofia\,\ Tallinn\,\ Vilnius/Europe\/H
 #Asia/Muscat - Steve
 perl -pi -e 's/GMT\ \+0400\ \(Standard\)\ \/\ GMT\ \+0400\ \(Daylight\)/Asia\/Muscat/g' $ICSFILE
 # ADDING YOUR OWN REGULAR EXPRESSION
-# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE 
+# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE
 # UNDER `Customise timezone support for your region`
 # DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.
 #INCORRECT='';

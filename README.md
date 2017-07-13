@@ -9,7 +9,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 # Apple iCal / Microsoft Exchange server Timezone Fix
-This is a fix I created about 3 years ago that fixes timezone issues between iCal events sent by Exchange Server to Apple iCal. There is a problem with certain versions of Exchange where it offsets the meeting time due to compatibility issues with timezone support. This fixes this issue. 
+This is a fix I created about 3 years ago that fixes timezone issues between iCal events sent by Exchange Server to Apple iCal. There is a problem with certain versions of Exchange where it offsets the meeting time due to compatibility issues with timezone support. This fixes this issue.
 
 ## Contents
 <!-- MarkdownTOC -->
@@ -80,7 +80,7 @@ This fix has been tested on Mac OS X Leopard 10.5.1, 10.5.2, 10.5.3, 10.5.4 as w
 ## Setting up the Mail Rule
 If you are upgrading from a previous version or have already set up the mail rule in Mail you can ignore the this step completely.
 
-For first time users this is the final step to complete before you can begin using this fix. The email rule is important as it calls the AppleScript file which is where all the magic happens. 
+For first time users this is the final step to complete before you can begin using this fix. The email rule is important as it calls the AppleScript file which is where all the magic happens.
 
 Click on `Mail –> Preferences –> Rules` and create a new rule that looks identical to the one below.
 
@@ -105,10 +105,10 @@ The timezone fix will work without any customisation if your timezone falls in a
  4. Tallinn
  5. Asia/Muscat
 
-Any timezone outside of the five above means that you will have no choice but to do some manual editing to get this script working for your timezone. There are four steps to follow which I hope are well documented and easy enough for you to implement this yourself. 
+Any timezone outside of the five above means that you will have no choice but to do some manual editing to get this script working for your timezone. There are four steps to follow which I hope are well documented and easy enough for you to implement this yourself.
 
 ### 1. Finding the incorrect timezone from Microsoft Exchange
-To find out what the incorrect timezone data is you need to open up a Microsoft Exchange `ics` file that was sent from your Exchange server with a text editor. 
+To find out what the incorrect timezone data is you need to open up a Microsoft Exchange `ics` file that was sent from your Exchange server with a text editor.
 
 In this file you will see a line that looks similar to this:
 ```
@@ -119,14 +119,14 @@ Opem up Apple iCal, create a dummy calendar event and then send yourself an iCal
 ```
 "DTSTART;TZID=Africa/Johannesburg:20080329T113000"
 ```
-From both of the steps above you can see that Exchange is using the 
-`(GMT+02.00) Harare/Pretoria` timezone information while Apple iCal 
+From both of the steps above you can see that Exchange is using the
+`(GMT+02.00) Harare/Pretoria` timezone information while Apple iCal
 is using `Africa/Johannesburg`. With this data you have the two bits of required information to setup your own timezone in the script.
 
 ### 3. Open up the script
 Open up the `fix_timezone.sh` file located in the `/Applications/iCalFix/` folder with a text editor. This file contains various regular expressions that search for incorrect timezone data and replaces it with the correct data.
 
-You will need to use the two sets of data you've just gotten to create your own regular expression in step 4 below. However, before you do this it is important to understand how the expression works so that modifying your own makes sense to you as well as to avoid confusion or making errors when editing the file. 
+You will need to use the two sets of data you've just gotten to create your own regular expression in step 4 below. However, before you do this it is important to understand how the expression works so that modifying your own makes sense to you as well as to avoid confusion or making errors when editing the file.
 
 An example of an expression, which you will find in the file, is shown below:
 ```perl
@@ -149,7 +149,7 @@ To refresh your memory, the incorrect Microsoft Exchange timezone was `(GMT+02.0
 Scroll to the bottom of the script where you see the following template that has been added to make the process easier for you:
 ```perl
 # ADDING YOUR OWN REGULAR EXPRESSION
-# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE 
+# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE
 # UNDER `Customise timezone support for your region`
 # DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.
 #INCORRECT='';
@@ -166,7 +166,7 @@ You need to uncomment the following lines by deleting the `#` in front of each l
 If done correctly, you should now have the following:
 ```perl
 # ADDING YOUR OWN REGULAR EXPRESSION
-# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE 
+# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE
 # UNDER `Customise timezone support for your region`
 # DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.
 INCORRECT='';
@@ -209,7 +209,7 @@ All that is needed to get the right modified version is to add a backslash befor
 #### Adding the data to the script
 ```perl
 # ADDING YOUR OWN REGULAR EXPRESSION
-# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE 
+# PLEASE FOLLOW THE STEPS CONTAINED IN THE README FILE
 # UNDER `Customise timezone support for your region`
 # DO NOT MAKE ANY MODIFICATIONS WITHOUT READING WHAT TO DO FIRST.
 INCORRECT='\(GMT\+02\.00\)\ Harare\/Pretoria';
@@ -232,7 +232,7 @@ If you need any support or don't know how to make these changes please feel free
 * This fix has **not** been tested by me on either Mac OS X 10.6, 10.7 or 10.8 so I have no idea if it works any more or not. It would be great if someone could let me know if it worked on one of these versions or not by sending me a mail to justin@hartman.me
 
 ## Release Notes
-The release notes can be found in the [CHANGELOG](CHANGELOG.md) file. 
+The release notes can be found in the [CHANGELOG](CHANGELOG.md) file.
 
 ## License
 [GNU GPLv3](LICENSE.md).
@@ -242,5 +242,3 @@ See [CREDITS](CREDITS.md)
 
 [script-download]: https://github.com/justinhartman/OSX-iCal-Fix/raw/v1.5.0/icalfix_install.zip
 [issue-reporting]: https://github.com/justinhartman/OSX-iCal-Fix/issues/new
-
-

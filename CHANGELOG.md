@@ -26,7 +26,7 @@
 - The original script in version 1.3 and below was setup to run off my server. I have now cleaned this up and made it a little more intuitive for Github. Overall it's much simpler to install it now (no having to download files etc.)
 
 ## Version 1.3.0
-- Source: Migrated the source code of the original project hosted on my site on Github. 
+- Source: Migrated the source code of the original project hosted on my site on Github.
 - Fixed: Paths to my server have been changed to paths to Github now.
 - Removed: There was a Firefox plugin I created many years ago that ended up in the original commit. This has been removed.
 
