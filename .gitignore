@@ -1,7 +1,21 @@
+# Created by https://www.gitignore.io/api/osx,linux,windows,sublimetext
 
-# Created by https://www.gitignore.io/api/osx,macos,sublimetext
+### Linux ###
+*~
 
-### macOS ###
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### OSX ###
 *.DS_Store
 .AppleDouble
 .LSOverride
@@ -27,16 +41,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-### OSX ###
-
-# Icon must end with two \r
-
-# Thumbnails
-
-# Files that might appear in the root of a volume
-
-# Directories potentially created on remote AFP share
 
 ### SublimeText ###
 # cache files for sublime text
@@ -70,4 +74,25 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
-# End of https://www.gitignore.io/api/osx,macos,sublimetext
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# End of https://www.gitignore.io/api/osx,linux,windows,sublimetext
